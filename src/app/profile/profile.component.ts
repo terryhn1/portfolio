@@ -1,6 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
 
-import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
   selector: 'app-profile',
@@ -9,16 +9,16 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap'
 })
 export class ProfileComponent implements OnInit {
 
-  showNavigationArrows = false;
-  showNavigationIndicators = false;
-  images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
-  constructor(config: NgbCarouselConfig) {
-    // customize default values of carousels used by this component tree
-    config.showNavigationArrows = true;
-    config.showNavigationIndicators = true;
-  }
-
+  aboutMe: String;
+  projects: String;
+  languages = ['/assets/icons/python.png', '/assets/icons/c-plus-plus-logo.png', '/assets/icons/javascript.png'
+              ,'/assets/icons/c-sharp-logo.png', '/assets/icons/java.png', '/assets/icons/css.png','/assets/icons/html.png'];
+  caught = fetch('/assets/about-me.txt').then(response => response.text()).then(data => {
+    this.aboutMe = data;
+  })
+  caught1 = fetch('/assets/projects.txt').then(response => response.text()).then(data => {
+    this.projects = data;
+  })
   ngOnInit() {
   }
 

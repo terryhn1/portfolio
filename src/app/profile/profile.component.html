@@ -1,3 +1,19 @@
+<div class = "container-fluid">
+    <div class = "bg-secondary">
+        <h1>Profile</h1>
+    </div>
+    <h2>About Me</h2>
+    <p>{{aboutMe}}</p>
 
+    <h2>Skills</h2>
+    <h3>Languages</h3>
+    <div class = "container">
+            <div *ngFor = "let icon of languages">
+                <img id = "languages" src = {{icon}}>
+            </div>
+    </div>
+
+    <div [innerHTML] = "projects"></div>
+</div>
 
 
