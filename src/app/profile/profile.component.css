@@ -8,8 +8,21 @@ h1 {
     color: white;
 }
 
+#projects {
+    text-align: center;
+}
 
 #languages {
-    height: 10%;
-    width: 10%;
+    width: 8%;
+    height: 8%;
+}
+
+.image-container{
+    display: flex;
+    flex-wrap:wrap;
+    align-content: space-evenly;
+}
+
+#skills { 
+    justify-content: center;
 }

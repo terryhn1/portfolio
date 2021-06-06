@@ -1,36 +1,36 @@
-<h3>Projects</h3>
-Hunger Over Easy(2019 - Current): <br>
-- Current director of a program associated with Circle K International with the intentions of raising money for food charities <br>
-- Reorganized layout of program after social distancing guidelines associated with COVID-19 <br>
-- Led team of 10 to organize for a one-week event streamed on Twitch <br>
-- Managed agendas,goals, and managed information for 5+ subgroups <br>
+<h3>Hunger Over Easy(2019 - Current)</h3> <br>
+Current director of a program associated with Circle K International with the intentions of raising money for food charities <br>
+Reorganized layout of program after social distancing guidelines associated with COVID-19 <br>
+Led team of 10 to organize for a one-week event streamed on Twitch <br>
+Managed agendas,goals, and managed information for 5+ subgroups <br>
 <br>
 <br>
 
-League of Legends Match Predictor(2021):<br>
--Data extraction of over 9,000 matches in top rank from Kaggle database<br>
--Created scoring methods predictions for a Bayesian Network prediction<br>
+<h4>League of Legends Match Predictor(2021)</h4><br>
+Data extraction of over 9,000 matches in top rank from Kaggle database<br>
+Created scoring methods predictions for a Bayesian Network prediction<br>
 <br>
 <br>
 
-Checkers Bot(2020):<br>
--Used Monte Carlo algorithm to implement a smart Checkers Bot<br>
+<h4>Checkers Bot(2020)</h4><br>
+Used Monte Carlo algorithm to implement a smart Checkers Bot<br>
 <br>
 <br>
 
-Foodude(2019): <br>
-- Front-end work with React.JS and Bootstrap 4 to deliver an open-source food database.<br>
-- Worked with MongoDB and Yelp API. <br>
-- Developed at Hack @ UCI Hackathon <br>
+<h4>Foodude(2019)</h4><br>
+Front-end work with React.JS and Bootstrap 4 to deliver an open-source food database.<br>
+Worked with MongoDB and Yelp API. <br>
+Developed at Hack @ UCI Hackathon <br>
 <br>
 <br>
 
-FindMyBoba(2019): <br>
-- Used Bootstrap, node.JS, and Express.JS to create a shop randomizer<br>
-- Worked with Yelp API and Google Maps API<br>
-- Developed at Hack @ UCI Beginners Hackathon<br>
+<h4>FindMyBoba(2019)</h4><br>
+Used Bootstrap, node.JS, and Express.JS to create a shop randomizer<br>
+Worked with Yelp API and Google Maps API<br>
+Developed at Hack @ UCI Beginners Hackathon<br>
 <br>
 <br>
+</div>
 
 
 
