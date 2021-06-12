@@ -22,9 +22,6 @@ export class ProfileComponent implements OnInit {
   caught = fetch('/assets/about-me.txt').then(response => response.text()).then(data => {
     this.aboutMe = data;
   })
-  caught1 = fetch('/assets/projects.txt').then(response => response.text()).then(data => {
-    this.projects = data;
-  })
   ngOnInit() {
   }
 
