@@ -1,0 +1,17 @@
+<div class = "container-fluid d-flex justify-content-center">
+    <div class = "row">
+        <div *ngFor = "let data of work" class="card mb-3 col-6">
+            <img src="{{data.banner}}" class="card-img-top" alt="..." id = "card-picture">
+            <div class="card-body">
+              <h3 class="card-title">{{data.company_name}}</h3>
+              <p class = "card-subtitle mb-2 text-muted">{{data.date}}</p>
+              <p class = "card-subtitle mb-2 text-muted">{{data.titles}}</p>
+              <br>
+              <p *ngFor = "let info of data.info" class="card-text">{{info}}</p>
+              <a *ngIf = "data.website.length > 1;else elseBlock" href= {{data.website}} class="btn btn-dark d-grid gap-2" role="button" data-bs-toggle="button">Go to website</a>
+              <ng-template #elseBlock><a class = "btn btn-dark d-grid gap-2 disabled" role = "button" data-bs-toggle= "button">No website</a></ng-template>
+            </div>
+          </div>
+    </div>
+</div>
+
