@@ -14,14 +14,15 @@ export class ProjectCardComponent implements OnInit {
       var project_data = data.split("\n");
       var holderArray = new Array();
       
-      for (let i = 0; i < project_data.length; i += 7){
+      for (let i = 0; i < project_data.length; i += 8){
         var objectData = {
           date: project_data[i],
           name: project_data[i+1],
           line1: project_data[i+2],
           line2: project_data[i+3],
           line3: project_data[i+4],
-          images: project_data[i+5].split(",")
+          images: project_data[i+5].split(","),
+          github: project_data[i+6]
         };
         
         holderArray.push(objectData);

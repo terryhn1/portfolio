@@ -1,27 +1,32 @@
-
-<div *ngFor = "let project of projects">
-    <div class="card">
-        <div class="card-header">
-            {{project.date}}
-        </div>
-        <div class="card-body">
-            <div class = "container-fluid">
-                <div class= "row">
-                    <div class = "col-7">
-                        <h5 class="card-title">{{project.name}}</h5>
-                    <p class="card-text">{{project.line1}}</p>
-                    <p class = "card-text">{{project.line2}}</p>
-                    <p class = "card-text">{{project.line3}}</p>
-                    <a href="#" class="btn btn-primary">Go to Github Repo</a>
-                    </div>
-                    <div class = "col-5">
-                        <div class= "container">
-                            <img *ngFor = "let image of project.images" src = {{image}} id = "icon-images" class = "rounded">
+<div class = "container-fluid">
+    <div class = "bg-secondary">
+        <h1>Projects</h1>
+    </div>
+    <div *ngFor = "let project of projects">
+        <div class="card">
+            <div class="card-header">
+                {{project.date}}
+            </div>
+            <div class="card-body">
+                <div class = "container-fluid">
+                    <div class= "row">
+                        <div class = "col-6">
+                            <h5 class="card-title">{{project.name}}</h5>
+                        <p class="card-text">{{project.line1}}</p>
+                        <p class = "card-text">{{project.line2}}</p>
+                        <p class = "card-text">{{project.line3}}</p>
+                        <a *ngIf = "project.github.length > 1; else elseBlock" href={{project.github}} target = "_blank" class="btn btn-dark">Go to Github Repo</a>
+                        <ng-template #elseBlock><a href = "#" class = "btn btn-dark disabled">Private Repo</a></ng-template>
+                        </div>
+                        <div class = "col-6">
+                            <div class= "container">
+                                <img *ngFor = "let image of project.images" src = {{image}} id = "icon-images" class = "rounded">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div style = "padding-top: 1%"></div>
     </div>
-    <div style = "padding-top: 1%"></div>
 </div>

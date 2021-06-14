@@ -1,0 +1,14 @@
+Languages
+/assets/icons/python.png,/assets/icons/c-plus-plus-logo.png,/assets/icons/javascript.png,/assets/icons/c-sharp-logo.png,/assets/icons/java.png,/assets/icons/css.png,assets/icons/html.png,/assets/icons/sql.png
+
+Web Development
+assets/icons/bootstrap.png,/assets/icons/docker.png,/assets/icons/node.png,/assets/icons/angular.png,/assets/icons/react.png,/assets/icons/vsc.png,/assets/icons/mongodb.png
+
+Mobile Development
+/assets/icons/android-studio.png
+
+Game Development
+/assets/icons/unity.png
+
+Platforms
+/assets/icons/windows.png

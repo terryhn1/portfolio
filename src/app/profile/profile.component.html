@@ -2,55 +2,35 @@
     <div class = "bg-secondary">
         <h1>Profile</h1>
     </div>
-    <h2>About Me</h2>
-    <p>{{aboutMe}}</p>
 
-    <h2>Skills</h2>
-
-    <div class = "d-flex justify-content-center">
-        <h3>Languages</h3>
+    <div class = "row">
+        <div class= "col-6 d-flex justify-content-center">
+            <img id = "profile-pic" class = "rounded-circle" src = "/assets/icons/hungerovereasy.png">
+        </div>
+        <div class = "col-6">
+            <h2>About Me</h2>
+            <h4>Summary</h4>
+            <p>I am a new programmer to the scene, looking for opportunities in Software Development and Video Game Development.</p>
+            <h4>Education</h4>
+            <p>University of California - Irvine | Computer Science Major | Expected Grad: Spring 2022</p>
+            <h4>Hobbies and Interest</h4>
+            <p>Volleyball, Basketball, Running, Photography, Cooking, Music, Video Gaming</p>
+            
+            
+        </div>
     </div>
+    <div style = "padding: 2%;"></div>
 
-    <div class = "row justify-content-center" style = "padding-bottom: 5%;">
-        <img id = "languages" [src] = languages[0]>
-        <img id = "languages" [src] = languages[1]>
-        <img id = "languages" [src] = languages[2]>
-        <img id = "languages" [src] = languages[3]>
-        <img id = "languages" [src] = languages[4]>
-        <img id = "languages" [src] = languages[5]>
-        <img id = "languages" [src] = languages[6]>
-        <img id = "languages" [src] = languages[7]>
-
+    <div *ngFor = "let row of data">
+        <div class = "d-flex justify-content-center" style = "padding-bottom: 1%;">
+            <h2>
+                {{row.title}}
+            </h2>
+        </div>
+        <div class = "row justify-content-center" style = "padding-bottom: 3%;">
+            <img *ngFor = "let image of row.images" src = {{image}} id = "languages">
+        </div>
     </div>
-
-    <div class = "d-flex justify-content-center">
-        <h3>Web Development</h3>
-    </div>
-
-    <div class = "row justify-content-center" style = "padding-bottom: 5%;">
-        <img id = "languages" [src] = web[0]>
-        <img id = "languages" [src] = web[1]>
-        <img id = "languages" [src] = web[2]>
-        <img id = "languages" [src] = web[3]>
-        <img id = "languages" [src] = web[4]>
-        <img id = "languages" [src] = web[5]>
-        <img id = "languages" [src] = web[6]>
-
-    </div>
-
-    <div class = "d-flex justify-content-center">
-        <h3>Game Development</h3>
-    </div>
-
-    <div class = "row justify-content-center" style = "padding-bottom: 5%;">
-        <img id = "languages" [src] = game[0]>
-
-    </div>
-    <h2>Work Experience</h2>
-    <app-work-profile></app-work-profile>
-    <!-- <h2>Projects</h2>
-    <app-project-card></app-project-card> -->
-    <!-- <div id= "projects" [innerHTML] = "projects"></div> -->
 </div>
 
 
