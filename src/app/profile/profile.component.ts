@@ -1,4 +1,3 @@
-
 import { Component, HostListener, OnInit } from '@angular/core';
 
 
@@ -10,7 +9,16 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
   data: Array<Object>;
   innerWidth: Number;
-  profDescription: String;
+  windowCheck = function(){
+    this.innerWidth = window.innerWidth;
+    var prof_desc = document.getElementById("prof-desc");
+    if (window.innerWidth <= 1500){
+      prof_desc.className = "col";
+    }
+    else{
+      prof_desc.className = "col-8";
+    }
+  }
   ngOnInit() {
     fetch('/assets/profile.txt').then(response => response.text()).then(data =>{
       var newData = data.split("\n");
@@ -25,18 +33,12 @@ export class ProfileComponent implements OnInit {
       }
       this.data = holderArray;
 
-
+      this.windowCheck();
     });
-    fetch('/assets/prof-description.txt').then(response => response.text()).then(data =>{
-      this.profDescription = data;
-    })
-
-    this.innerWidth = window.innerWidth;
-
   }
   @HostListener('window:resize', ['$event'])
   onResize(event: any){
-    this.innerWidth = window.innerWidth;
+    this.windowCheck();
   }
 
 }

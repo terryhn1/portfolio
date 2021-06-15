@@ -8,7 +8,8 @@ import { WorkProfileComponent } from './work-profile/work-profile.component';
 const routes: Routes = [{path: 'profile', component: ProfileComponent},
                         {path: 'projects', component: ProjectCardComponent},
                         {path: 'work', component: WorkProfileComponent},
-                        {path: 'home', component: HomeComponent}];
+                        {path: 'home', component: HomeComponent},
+                        {path:'', redirectTo: 'home', pathMatch:'full'}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
