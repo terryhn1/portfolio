@@ -14,3 +14,16 @@ h1 {
     padding-right: 2%;
     padding-top: 7%;
 }
+
+.zoom {
+    transition: transform 0.3s;
+}
+
+.zoom:hover{
+    transform: scale(1.2);
+}
+
+.gradientBlack {
+    background: rgb(186,186,186);
+    background: linear-gradient(90deg, rgba(186,186,186,1) 0%, rgba(10,10,40,1) 56%, rgba(0,0,0,1) 100%);
+}

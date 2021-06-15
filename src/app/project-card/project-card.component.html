@@ -1,5 +1,5 @@
 <div class = "container-fluid">
-    <div class = "bg-secondary">
+    <div class = "gradientBlack">
         <h1>Projects</h1>
     </div>
     <div *ngFor = "let project of projects">
@@ -20,7 +20,7 @@
                         </div>
                         <div class = "col-6">
                             <div class= "container">
-                                <img *ngFor = "let image of project.images" src = {{image}} id = "icon-images" class = "rounded">
+                                <img *ngFor = "let image of project.images" src = {{image}} id = "icon-images" class = "rounded zoom">
                             </div>
                         </div>
                     </div>

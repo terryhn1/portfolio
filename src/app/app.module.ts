@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { WorkProfileComponent } from './work-profile/work-profile.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { WorkProfileComponent } from './work-profile/work-profile.component';
     ProfileComponent,
     ProjectCardComponent,
     FooterComponent,
-    WorkProfileComponent
+    WorkProfileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

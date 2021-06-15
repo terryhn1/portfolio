@@ -1,0 +1,15 @@
+<div class= "d-flex justify-content-center">
+    <div class = "container-fluid">
+        <h2 class = "row">About Me</h2>
+        <br>
+        <h4 class = "row">Summary</h4>
+        <p class = "row">I am a programmer with about four years of experience in coding.</p>
+        <p class = "row">Looking for opportunities in Software Development and Game Development.</p>
+        <h4 class = "row">Education</h4>
+        <p class = "row">Coursework</p>
+        <p class = "row">Data Structures, Machine Learning, Data Mining, Graphical Models, Computer Vision, Information Retrieval, </p>
+        <p class = "row">University of California - Irvine | Computer Science Major | Specialization in AI | Expected Grad: Spring 2022</p>
+        <h4 class = "row">Hobbies and Interest</h4>
+        <p class = "row">Volleyball, Basketball, Running, Photography, Hiking, Cooking, Music, Strategy Video Games</p>
+    </div>
+</div>
