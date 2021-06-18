@@ -11,6 +11,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { WorkProfileComponent } from './work-profile/work-profile.component';
 import { HomeComponent } from './home/home.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

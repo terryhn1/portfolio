@@ -5,7 +5,7 @@
   <div class = "container-fluid d-flex justify-content-center">  
     <div class = "row">
         <div *ngFor = "let data of work" class="card mb-3 col-6">
-            <img src="{{data.banner}}" class="card-img-top zoom" alt="..." id = "card-picture">
+            <img src="{{data.banner}}" class="card-img-top zoom" alt="{{data.company_name}}" id = "card-picture">
             <div class="card-body">
               <h3 class="card-title">{{data.company_name}}</h3>
               <p class = "card-subtitle mb-2 text-muted">{{data.date}}</p>

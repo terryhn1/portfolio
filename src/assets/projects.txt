@@ -3,7 +3,7 @@ Personal Portfolio Website
 Developed using Angular web framework.
 Component-driven design of website using multiple files for ease.
 Uses Anime.JS for website animations.
-/assets/icons/javascript.png,/assets/icons/angular.png,/assets/icons/css.png,/assets/icons/html.png,/assets/icons/bootstrap.png,/assets/icons/vsc.png
+/assets/icons/javascript.png,/assets/icons/angular.png,/assets/icons/css.png,/assets/icons/html.png,/assets/icons/bootstrap.png,/assets/icons/vsc.png,/assets/icons/animejs.jpg
 
 
 2021

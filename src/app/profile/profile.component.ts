@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import anime from 'animejs/lib/anime.es.js';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
   data: Array<Object>;
   innerWidth: Number;
+  images: Array<any>;
   windowCheck = function(){
     this.innerWidth = window.innerWidth;
     var prof_desc = document.getElementById("prof-desc");
@@ -19,6 +21,8 @@ export class ProfileComponent implements OnInit {
       prof_desc.className = "col-8";
     }
   }
+
+
   ngOnInit() {
     fetch('/assets/profile.txt').then(response => response.text()).then(data =>{
       var newData = data.split("\n");
@@ -35,7 +39,19 @@ export class ProfileComponent implements OnInit {
 
       this.windowCheck();
     });
+
+    var icons = document.getElementsByClassName("icon-translate");
+    console.log(icons);
+    anime({
+      targets: icons,
+      duration: 1000,
+      autoplay: true,
+      translateX: [-500, 0],
+      easing: 'easeInOutQuad'
+    });
   }
+
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any){
     this.windowCheck();

@@ -1,0 +1,17 @@
+.rounded-circle {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+/* 
+.zoom {
+    transition: transform 0.2s;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+} */
+
+a {
+    color:black;
+}
