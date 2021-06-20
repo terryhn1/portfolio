@@ -12,6 +12,9 @@ import { FooterComponent } from './footer/footer.component';
 import { WorkProfileComponent } from './work-profile/work-profile.component';
 import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ProfileBannerComponent } from './profile-banner/profile-banner.component';
+import { ProjBannerComponent } from './proj-banner/proj-banner.component';
+import { WorkBannerComponent } from './work-banner/work-banner.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ProjectCardComponent,
     FooterComponent,
     WorkProfileComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileBannerComponent,
+    ProjBannerComponent,
+    WorkBannerComponent
   ],
   imports: [
     BrowserModule,
