@@ -12,7 +12,6 @@ export class ProfileComponent implements OnInit {
   innerWidth: Number;
   images: Array<any>;
   animationCheck = false;
-  animationReset = false;
   windowCheck = function(){
     this.innerWidth = window.innerWidth;
     var prof_desc = document.getElementById("prof-desc");
@@ -65,7 +64,7 @@ export class ProfileComponent implements OnInit {
     });
     var startAnim =  anime({
       targets: icons,
-      duration: 1200,
+      duration: 500,
       opacity: 1,
       easing: 'easeInOutSine',
       translateX: [-2000,0]
@@ -95,14 +94,10 @@ export class ProfileComponent implements OnInit {
 
       }
 
-      if(funcBound(rectEnd) && this.animationCheck){
-        //user has scrolled to the very botttom
-        this.animationReset = true;
-      }
-      if (funcBound(rectProfile) && this.animationReset){
+      if (funcBound(rectProfile) && this.animationCheck){
         //user has scrolled to the very top for the animation reset
-        this.animationReset = false;
         this.animationCheck = false;
+        console.log("resetting the animation");
         resetAnim.restart();
         
       }
