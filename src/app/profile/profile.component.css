@@ -7,6 +7,20 @@ h1 {
     text-align: center;
     color: white;
 }
+h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: 50px;
+}
+
+h4 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 30px;
+}
+
+p{
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+}
 
 #projects {
     text-align: center;

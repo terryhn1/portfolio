@@ -15,6 +15,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ProfileBannerComponent } from './profile-banner/profile-banner.component';
 import { ProjBannerComponent } from './proj-banner/proj-banner.component';
 import { WorkBannerComponent } from './work-banner/work-banner.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { WorkBannerComponent } from './work-banner/work-banner.component';
     HomeComponent,
     ProfileBannerComponent,
     ProjBannerComponent,
-    WorkBannerComponent
+    WorkBannerComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
