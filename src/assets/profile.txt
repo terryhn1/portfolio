@@ -1,14 +1,17 @@
 Languages
 /assets/icons/python.png,/assets/icons/c-plus-plus-logo.png,/assets/icons/javascript.png,/assets/icons/c-sharp-logo.png,/assets/icons/java.png,/assets/icons/css.png,assets/icons/html.png,/assets/icons/sql.png
 
-Web Development
-assets/icons/bootstrap.png,/assets/icons/docker.png,/assets/icons/node.png,/assets/icons/angular.png,/assets/icons/react.png,/assets/icons/vsc.png,/assets/icons/mongodb.png
+Frameworks
+assets/icons/bootstrap.png,/assets/icons/angular.png,/assets/icons/react.png
 
-Mobile Development
-/assets/icons/android-studio.png
+Integrated Development Environments (IDE) & Code Editors
+/assets/icons/android-studio.png,/assets/icons/vsc.png
 
-Game Development
+Application Development Platforms
+/assets/icons/firebase.png
+
+Game Engines
 /assets/icons/unity.png
 
-Platforms
+Operating System Platforms
 /assets/icons/windows.png
