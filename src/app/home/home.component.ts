@@ -101,7 +101,6 @@ export class HomeComponent implements OnInit {
       if (inViewPortBrand && !this.viewportBrand && !this.animationReset){
         //If the page is scrolled to where the SVG can come into view
         this.viewportBrand = true;
-        console.log("Animating SVG");
         anime({
           targets: brand,
           duration:2000,
@@ -113,7 +112,6 @@ export class HomeComponent implements OnInit {
         //If the page is scrolled to the bottom where the icons are
         this.viewportIcons = true;
         this.animationReset= true;
-        console.log("Animating Icons");
         anime({
           targets: icons,
           duration: 2000,
@@ -124,7 +122,6 @@ export class HomeComponent implements OnInit {
           
       } 
       if (this.animationReset && inViewPortCarousel){
-        console.log("Resetting");
         this.viewportIcons = false;
         this.animationReset = false;
         this.viewportBrand = false;
