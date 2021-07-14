@@ -2,7 +2,7 @@
     <app-profile-banner id = "profile-banner"></app-profile-banner>
     <div class = "row">
         <div *ngIf = "innerWidth >= 1500;" class= "col-4 d-flex justify-content-center">
-            <img id = "profile-pic" class = "rounded-circle zoom" src = "\assets\prof-pic.JPG" alt = "profile picture">
+            <img id = "profile-pic" class = "rounded-circle zoom" src = "\assets\prof-pic.webp" alt = "profile picture">
         </div>
         <div class = "col-8" id = "prof-desc">
                 <div class = "container-fluid" style = "text-align:center;">
@@ -97,7 +97,7 @@
     <div id = "half" style = "padding: 2%;"></div>
     <div id = "icon-translate">
         <div *ngFor = "let row of data">
-            <div class = "d-flex justify-content-center" style = "padding-bottom: 1%;">
+            <div class = "d-flex justify-content-center" style = "padding-bottom: 1%; text-align: center;">
                 <h2>
                     {{row.title}}
                 </h2>

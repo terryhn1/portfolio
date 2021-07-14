@@ -16,6 +16,7 @@ import { ProfileBannerComponent } from './profile-banner/profile-banner.componen
 import { ProjBannerComponent } from './proj-banner/proj-banner.component';
 import { WorkBannerComponent } from './work-banner/work-banner.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LeagueSiteComponent } from './league-site/league-site.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +31,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ProfileBannerComponent,
     ProjBannerComponent,
     WorkBannerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LeagueSiteComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule

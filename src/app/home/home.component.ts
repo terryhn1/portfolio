@@ -96,8 +96,7 @@ export class HomeComponent implements OnInit {
       const inViewPortBrand = boundFunc(rectBrand);
       const inViewPortIcons = boundFunc(rectIcons);
       const inViewPortCarousel = boundFunc(rectCarousel);
-              
-      
+
       if (inViewPortBrand && !this.viewportBrand && !this.animationReset){
         //If the page is scrolled to where the SVG can come into view
         this.viewportBrand = true;

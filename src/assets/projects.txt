@@ -1,4 +1,12 @@
 2021
+League of Legends Optimal Item Build
+Uses data extracted from Riot Games API to calculate item sets used at high ELO.
+Relational databases to control data measurement.
+Will include situational builds using machine learning in further implementation.
+/assets/icons/riot-games.png,/assets/icons/python.png,/assets/icons/mysql.png,/assets/icons/vsc.png,/assets/icons/numpy.png,/assets/icons/pytorch.png
+https://github.com/terryhn1/league-optimal-item-build,projects/league-site
+
+2021
 Personal Portfolio Website
 Developed using Angular web framework.
 Component-driven design of website using multiple files for ease.

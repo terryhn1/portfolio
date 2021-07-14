@@ -22,8 +22,9 @@ export class ProjectCardComponent implements OnInit {
           line2: project_data[i+3],
           line3: project_data[i+4],
           images: project_data[i+5].split(","),
-          github: project_data[i+6]
+          websites: project_data[i+6].split(",")
         };
+        console.log(objectData.websites)
         
         holderArray.push(objectData);
       }

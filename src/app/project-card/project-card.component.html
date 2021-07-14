@@ -13,7 +13,8 @@
                         <p class="card-text">{{project.line1}}</p>
                         <p class = "card-text">{{project.line2}}</p>
                         <p class = "card-text">{{project.line3}}</p>
-                        <a *ngIf = "project.github.length > 1; else elseBlock" href={{project.github}} target = "_blank" class="btn btn-dark">Go to Github Repo</a>
+                        <a *ngIf = "project.websites[0][0] != '\r'; else elseBlock" href={{project.websites[0]}} target = "_blank" class="btn btn-dark">Go to Github Repo</a>
+                        <a *ngIf = "project.websites.length == 2" href={{project.websites[1]}} class="btn btn-dark">Go to Project</a>
                         <ng-template #elseBlock><a href = "#" class = "btn btn-dark disabled">Private Repo</a></ng-template>
                         </div>
                         <div class = "col-6">
