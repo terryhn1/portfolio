@@ -17,6 +17,7 @@ import { ProjBannerComponent } from './proj-banner/proj-banner.component';
 import { WorkBannerComponent } from './work-banner/work-banner.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LeagueSiteComponent } from './league-site/league-site.component';
+import { LeagueChampionComponent } from './league-champion/league-champion.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LeagueSiteComponent } from './league-site/league-site.component';
     ProjBannerComponent,
     WorkBannerComponent,
     NotFoundComponent,
-    LeagueSiteComponent
+    LeagueSiteComponent,
+    LeagueChampionComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
