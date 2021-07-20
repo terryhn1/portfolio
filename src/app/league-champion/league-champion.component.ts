@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LeagueChampionComponent implements OnInit {
   champion: string;
   championBanner: string;
+  role: string;
 
   constructor() { }
 

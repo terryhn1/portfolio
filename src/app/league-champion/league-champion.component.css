@@ -1,0 +1,73 @@
+#page {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#title {
+    font-family: 'Rosario', sans-serif;
+    letter-spacing: 15px;
+}
+
+#content {
+    background-color: black;
+    border-radius: 25px;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+     size: 36px;
+}
+
+hr {
+    background-color: white;
+}
+
+h2{
+    font-family: "Rosario", sans-serif;
+    letter-spacing: 5px;
+}
+
+
+.background-filter::after {
+    -webkit-backdrop-filter: blur(0.3rem);
+    backdrop-filter: blur(0.3rem);
+
+    content: "";
+    display: block;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+}
+
+.background-filter {
+    position: relative;
+}
+
+.no-filter {
+    position: relative;
+    z-index: 1;
+}
+
+.container-lg{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.tab-pane {
+    color: white;
+}
+
+img {
+    height: auto;
+    width: 100%;
+
+}
