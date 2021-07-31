@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  items: any;
+
 }

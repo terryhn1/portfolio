@@ -19,6 +19,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LeagueSiteComponent } from './league-site/league-site.component';
 import { LeagueChampionComponent } from './league-champion/league-champion.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule} from '@angular/fire/database';
+import { environment } from 'src/environments/environment';
+import { LeagueSearchComponent } from './league-search/league-search.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,13 +39,16 @@ import { LeagueChampionComponent } from './league-champion/league-champion.compo
     WorkBannerComponent,
     NotFoundComponent,
     LeagueSiteComponent,
-    LeagueChampionComponent
+    LeagueChampionComponent,
+    LeagueSearchComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,44 @@
+#body-container {
+    background-image: url(/assets/league_banners/summoner_rift.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    height: 40vh;
+    object-fit: cover;
+    object-position: 70% 30%;
+}
+
+h1 {
+    letter-spacing: 30px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    letter-spacing: 15px;
+    font-size: 52px;
+}
+
+h4 {
+    color: white;
+    padding-top: 35px;
+    padding-bottom: 0px;
+}
+
+
+p {
+    letter-spacing: 2px;
+}
+
+#back-button {
+    position:absolute;
+    top: 75px;
+    bottom: 0px;
+    left: 20px;    
+
+}

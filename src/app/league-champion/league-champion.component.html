@@ -4,6 +4,15 @@
             <img loading = "lazy" class = "rounded" src = {{championBanner}}>
         </div>
     </div>
+    <div id = "back-button" class = "container-fluid no-filter">
+        <a id = "back-link" type = "button" (click) = "goBack()" style = "color: white;">
+            <svg  xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              </svg>
+              <h2>BACK</h2>
+              <hr id = "back-hr" style = "opacity: 0; stroke-width: 3">
+        </a>
+    </div>
     <div id = "title" class= "container-lg no-filter" style = "color:white">
         <div class = "d-flex justify-content-center">
             <h1>{{champion.toUpperCase()}}</h1>
@@ -18,7 +27,7 @@
               <button class="nav-link" id="items-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Item Build Stats</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="machup-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Matchups</button>
+              <button class="nav-link" id="matchup-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Matchups</button>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
@@ -31,79 +40,153 @@
                     </div>
                     <div class="d-flex justify-content-center">
                         <div class="row">
-                            <h4>PLACEHOLDER FOR ROLE IMAGES</h4>
+                            <div class="col-6">
+                                <h4>{{(data | async)?.role1}}</h4>
+                            </div>
+                            <div class="col-6">
+                                <h4>{{(data | async)?.role2}}</h4>
+                            </div>
                         </div>
                     </div>
                     <hr>
 
                     <div class="d-flex justify-content-center">
                         <div class="row">
-                            <h2 style = "margin-top: 15px;">MAIN POSITION</h2>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <div class="row">
-                            <h4>PLACEHOLDER FOR POSITION</h4>
-                        </div>
-                    </div>
-                    <hr>
-
-                    <div class="d-flex justify-content-center">
-                        <div class="row">
-                            <h2 style = "margin-top: 15px;">MAIN DAMAGE</h2>
+                            <h2 style = "margin-top: 15px;">CAPABILITIES</h2>
                         </div>
                     </div>
                     <h4>Physical Damage</h4>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div id = "physical" class="progress-bar" role="progressbar"  aria-valuenow="5" aria-valuemin="0" aria-valuemax="10"></div>
                       </div>
                     <h4 style = "margin-top: 10px;">Ability Power</h4>
                       <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div id = "ability" class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="10"></div>
+                      </div>
+                    <h4 style = "margin-top: 10px;">Defense</h4>
+                      <div class="progress">
+                        <div id = "defense" class="progress-bar" role="progressbar"  aria-valuenow="5" aria-valuemin="0" aria-valuemax="10"></div>
                       </div>
                     
                     <hr>
-                    <div class="row">
-                        <div class="d-flex justify-content-center">
-                            <h2>WIN RATE</h2>
-                        </div>
+                    <div class="row" style = "text-align: center;">
+                            <div class = "col-4">
+                                <h2>TOTAL WINS</h2>
+                            </div>
+                            <div class="col-4">
+                                <h2>TOTAL GAMES</h2>
+                            </div>
+                            <div class="col-4">
+                                <h2>WIN RATE</h2>
+                            </div>
                     </div>
-                    <div class="row">
-                        <div class="d-flex justify-content-center">
+                    <div class="row" style = "text-align: center;">
+                        <div class="col-4">
                             <h4>
-                                PLACEHOLDER FOR WIN RATE
+                                {{(data | async)?.totalWins}}
+                            </h4>
+                        </div>
+                        <div class="col-4">
+                            <h4>
+                                {{(data | async)?.totalGames}}
+                            </h4>
+                        </div>
+                        <div class="col-4">
+                            <h4>
+                                {{(data | async)?.winRatio}}
                             </h4>
                         </div>
                     </div>
+                    <p style = "margin-top: 20px; font-size: 11px;">*Data is determinant on Master, Grandmaster, and Challenger divisions. This data does not represent the whole community. Data is collected from Riot Games API'S Data Dragon.</p>
                 </div>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="items-tab">
                 <div class="container-md">
                     <div class="d-flex justify-content-center">
-                        <h2 style = "margin-top: 10px;">
-                            CORE THREE ITEMS
+                        <h2 style = "margin-top: 10px; margin-bottom: 20px;">
+                            BEST IN SLOT GENERAL BUILD
                         </h2>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <h4>
-                            PLACEHOLDER FOR THREE IMAGES. IF NOT ENOUGH DATA, DISPLAY "NOT ENOUGH DATA TAKEN"
-                        </h4>
+                    <div class= "row" style = "text-align: center;">
+                        <div class="col-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <img class = "item-image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h4 class = "item-name">{{(data | async)?.item1}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <img class = "item-image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h4 class = "item-name">{{(data | async)?.item2}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <img class = "item-image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h4 class = "item-name">{{(data | async)?.item3}}</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                     <hr>
 
-                    <div class="d-flex justify-content-center">
-                        <h2>
-                            TOP SITUATIONAL ITEMS
-                        </h2>
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                        <h4>
-                            PLACEHOLDER FOR ITEMS 
-                        </h4>
+                    <div class= "row" style = "text-align: center;">
+                        <div class="col-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <img class = "item-image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h4 class = "item-name">{{(data | async)?.item4}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <img class = "item-image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h4 class = "item-name">{{(data | async)?.item5}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="d-flex justify-content-center">
+                                        <img class = "item-image">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h4 class = "item-name">{{(data | async)?.item6}}</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <p style = "margin-top: 20px; font-size: 11px;">*If any item is listed as N/A, there is not enough data to compute. Therefore, this champion is not often played or/and has too low a winrate to be considered.</p>
             </div>
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="matchup-tab">
                 <div class="d-flex justify-content-center">

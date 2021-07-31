@@ -1,0 +1,58 @@
+<div id = "body-container" class = "container-fluid">
+
+    <div class = "row">
+        <div class="d-flex justify-content-center" style = "text-align: center;">
+            <h1>SEARCH</h1>
+        </div>
+    </div>
+
+    <div id = "back-button" class = "container-fluid no-filter">
+        <a [routerLink] = "['/projects/league-site']" id = "back-link" style = "color: white;">
+            <svg id = "back-svg" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              </svg>
+              <hr id = "back-hr" style = "opacity: 0; stroke-width: 3">
+        </a>
+    </div>
+
+    <div class = "d-flex justify-content-center">
+        <input id = "searchBar" class="form-control me-2" (keyup.enter) = "getSearch()" type = "text" value = {{search}} placeholder="Input champion name..." style = "width: 70%;">
+        <button id = "searchButton" class="btn btn-outline-primary" (click) = "getSearch()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg></button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <p id = "results"></p>
+    </div>
+    <div style = "margin: 50px;"></div>
+    <div class="container">
+        <ng-container *ngFor = "let result of searchMatches; let i = index">
+            <div *ngIf = "i < (currentPage * resultRestriction) && i >= (currentPage -1) * resultRestriction">
+                <a [routerLink] = "['/projects/league-site', getChampionUrl(result)]">
+                    <div class="card bg-dark text-white">
+                        <img loading = "lazy" src= {{urlReplacement(result)}} class="card-img" alt="...">
+                        <div class="card-img-overlay" >
+                          <h2 class="card-text" style = "padding-left: 10px;">{{result.toUpperCase()}}</h2>
+                        </div>
+                    </div>
+                </a>
+                <div style = "padding:30px;"></div>
+            </div>
+        </ng-container>
+       
+    </div>
+    <div class="container">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled skip">
+                <a class="page-link" [routerLink]="['/projects/league-site/search']" [queryParams] = "{value:keyword, page: currentPage -1}"  tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li *ngFor = "let i of pages; " class="page-item number" aria-current = "false"><a [routerLink] = "['/projects/league-site/search']" [queryParams] = "{value: keyword,page: i + 1}" class="page-link">{{i +1}}</a></li>
+              <li class="page-item skip">
+                <a class="page-link" [routerLink] = "['/projects/league-site/search']" [queryParams] = "{value:keyword, page: currentPage + 1}">Next</a>
+              </li>
+            </ul>
+          </nav>
+    </div>
+    <div style = "padding-bottom: 30px;"></div>
+</div>

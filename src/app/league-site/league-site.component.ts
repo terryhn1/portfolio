@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-league-site',
@@ -10,9 +12,22 @@ export class LeagueSiteComponent implements OnInit {
   halfIconLength: number;
   championNames: Array<String>;
 
-  constructor() { }
+  constructor(private _router: Router){
+  }
+
+  getSearch(){
+    var searchBar = document.getElementById('searchBar');
+    var keyword = (<HTMLInputElement>searchBar).value.toLowerCase();
+    this._router.navigate(['/projects/league-site/search'], {queryParams: {value: keyword, page: 1}});
+  }
 
   ngOnInit(): void {
+    const searchBar = document.getElementById('searchBar');
+    searchBar.addEventListener("keyup", event => { 
+      if ((<KeyboardEvent>event).key == "Enter"){
+        this.getSearch();
+      }
+    });
     fetch('/assets/league_icons/collector.json').then(response => response.json()).then(data =>{
       this.icons = data.images;
       this.halfIconLength = Math.floor(this.icons.length / 2);
@@ -25,7 +40,6 @@ export class LeagueSiteComponent implements OnInit {
         holderArray.push(ele.trim());
       });
       this.championNames = holderArray;
-      console.log(this.championNames);
     });
 
   }
@@ -45,7 +59,7 @@ export class LeagueSiteComponent implements OnInit {
         element.appendChild(cloneChild.firstChild);
         next = next.nextElementSibling;
       }
-    })
+    });
 
     iconsBottom.forEach((element)=> {
       const minSlide =10;
@@ -58,7 +72,8 @@ export class LeagueSiteComponent implements OnInit {
         element.appendChild(cloneChild.firstChild);
         next = next.nextElementSibling;
       }
-    })
+    });
   }
+
 
 }
