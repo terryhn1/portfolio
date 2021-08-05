@@ -1,0 +1,39 @@
+2020-2021
+idTech Online Private Lessons
+San Jose, California
+Computer Science Instructor
+Taught Python, Javascript, and C++ in private lessons.
+Deconstructed Pokemon game mechanics to create large project lesson plans.
+Introduced statistical probabiltiies into coding course for suitable game logic.
+https://www.idtech.com/
+/assets/work-banners/idtech-virtual.png
+
+2019-Current
+Hunger Over Easy
+University of California - Irvine
+Director 2020-Current, Activities Lead 2019-2020
+Program associated with Circle K International with the intentions of raising money for food charities.
+Reorganized layout of program after social distancing guidelines associated with COVID-19.
+Led team of 10 along with 5 subgroups to organize for a one-week event streamed on Twitch.
+https://www.ucicirclek.com/hungerovereasy/aboutPage.html
+/assets/work-banners/hungerovereasy.png
+
+2015-2018
+First Robotics Competition, Team 5027
+San Jose, California
+President 2016-2018, Business & Public Relations Lead 2015-2016, Robot Manuvering Coach 2016-2018
+Created robots in a six-week duration and prepared the team for competitions.
+Led 6+ subgroups for respective teams and overlooked robot design.
+Performed at FIRST Championships in St.Louis in 2015 after winning the Silicon Valley Regionals.
+https://frc5027.com/
+/assets/work-banners/team5027.png
+
+2016
+AllStars United Summer Camp
+San Jose, California
+Robotics Teacher
+Taught 3rd to 8th grade students at Hellyer Middle School
+Taught Mindstorm LEGO Robotics Block Coding, Mechanical Engineering, Electrical Engineering, and Basic Physics
+Co-created the robotics curriculum for the program.
+
+/assets/work-banners/allstars.png
