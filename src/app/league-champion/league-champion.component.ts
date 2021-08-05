@@ -56,6 +56,7 @@ export class LeagueChampionComponent implements OnInit {
   
     var backHR = document.getElementById("back-hr");
     var backLink = document.getElementById("back-link");
+    console.log("Champion page arrived");
     let animation = function(duration, opacity){
       return anime({
         targets: backHR,
